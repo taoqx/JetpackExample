@@ -1,0 +1,282 @@
+[
+  {
+    "id": 1,
+    "name": "CashBean1",
+    "icon": "http://api.anycash.in/images/1.jpg",
+    "amount": 60000,
+    "interest_rate": "0.049%/day",
+    "period": "91days",
+    "process_time": "10min",
+    "eligibility": [
+      "1. Indian Resident.",
+      "2. 21-56 years old.",
+      "3. Source of a monthly income."
+    ],
+    "process": "",
+    "android_jump_url": "https://play.google.com/store/apps/details?id=com.loan.cash.credit.easy.dhan.quick.udhaar.lend.game.jaldi.paisa.borrow.rupee.play.kredit\u0026hl=None",
+    "ios_jump_url": ""
+  },
+  {
+    "id": 2,
+    "name": "CashBean2",
+    "icon": "http://api.anycash.in/images/1.jpg",
+    "amount": 60000,
+    "interest_rate": "0.049%/day",
+    "period": "91days",
+    "process_time": "10min",
+    "eligibility": [
+      "1. Indian Resident.",
+      "2. 21-56 years old.",
+      "3. Source of a monthly income."
+    ],
+    "process": "",
+    "android_jump_url": "https://play.google.com/store/apps/details?id=com.loan.cash.credit.easy.dhan.quick.udhaar.lend.game.jaldi.paisa.borrow.rupee.play.kredit\u0026hl=None",
+    "ios_jump_url": ""
+  },
+  {
+    "id": 3,
+    "name": "CashBean3",
+    "icon": "http://api.anycash.in/images/1.jpg",
+    "amount": 60000,
+    "interest_rate": "0.049%/day",
+    "period": "91days",
+    "process_time": "10min",
+    "eligibility": [
+      "1. Indian Resident.",
+      "2. 21-56 years old.",
+      "3. Source of a monthly income."
+    ],
+    "process": "",
+    "android_jump_url": "https://play.google.com/store/apps/details?id=com.loan.cash.credit.easy.dhan.quick.udhaar.lend.game.jaldi.paisa.borrow.rupee.play.kredit\u0026hl=None",
+    "ios_jump_url": ""
+  },
+  {
+    "id": 4,
+    "name": "CashBean4",
+    "icon": "http://api.anycash.in/images/1.jpg",
+    "amount": 60000,
+    "interest_rate": "0.049%/day",
+    "period": "91days",
+    "process_time": "10min",
+    "eligibility": [
+      "1. Indian Resident.",
+      "2. 21-56 years old.",
+      "3. Source of a monthly income."
+    ],
+    "process": "",
+    "android_jump_url": "https://play.google.com/store/apps/details?id=com.loan.cash.credit.easy.dhan.quick.udhaar.lend.game.jaldi.paisa.borrow.rupee.play.kredit\u0026hl=None",
+    "ios_jump_url": ""
+  },
+  {
+    "id": 5,
+    "name": "CashBean5",
+    "icon": "http://api.anycash.in/images/1.jpg",
+    "amount": 60000,
+    "interest_rate": "0.049%/day",
+    "period": "91days",
+    "process_time": "10min",
+    "eligibility": [
+      "1. Indian Resident.",
+      "2. 21-56 years old.",
+      "3. Source of a monthly income."
+    ],
+    "process": "",
+    "android_jump_url": "https://play.google.com/store/apps/details?id=com.loan.cash.credit.easy.dhan.quick.udhaar.lend.game.jaldi.paisa.borrow.rupee.play.kredit\u0026hl=None",
+    "ios_jump_url": ""
+  },
+  {
+    "id": 6,
+    "name": "CashBean6",
+    "icon": "http://api.anycash.in/images/1.jpg",
+    "amount": 60000,
+    "interest_rate": "0.049%/day",
+    "period": "91days",
+    "process_time": "10min",
+    "eligibility": [
+      "1. Indian Resident.",
+      "2. 21-56 years old.",
+      "3. Source of a monthly income."
+    ],
+    "process": "",
+    "android_jump_url": "https://play.google.com/store/apps/details?id=com.loan.cash.credit.easy.dhan.quick.udhaar.lend.game.jaldi.paisa.borrow.rupee.play.kredit\u0026hl=None",
+    "ios_jump_url": ""
+  },
+  {
+    "id": 7,
+    "name": "CashBean7",
+    "icon": "http://api.anycash.in/images/1.jpg",
+    "amount": 60000,
+    "interest_rate": "0.049%/day",
+    "period": "91days",
+    "process_time": "10min",
+    "eligibility": [
+      "1. Indian Resident.",
+      "2. 21-56 years old.",
+      "3. Source of a monthly income."
+    ],
+    "process": "",
+    "android_jump_url": "https://play.google.com/store/apps/details?id=com.loan.cash.credit.easy.dhan.quick.udhaar.lend.game.jaldi.paisa.borrow.rupee.play.kredit\u0026hl=None",
+    "ios_jump_url": ""
+  },
+  {
+    "id": 8,
+    "name": "CashBean8",
+    "icon": "http://api.anycash.in/images/1.jpg",
+    "amount": 60000,
+    "interest_rate": "0.049%/day",
+    "period": "91days",
+    "process_time": "10min",
+    "eligibility": [
+      "1. Indian Resident.",
+      "2. 21-56 years old.",
+      "3. Source of a monthly income."
+    ],
+    "process": "",
+    "android_jump_url": "https://play.google.com/store/apps/details?id=com.loan.cash.credit.easy.dhan.quick.udhaar.lend.game.jaldi.paisa.borrow.rupee.play.kredit\u0026hl=None",
+    "ios_jump_url": ""
+  },
+  {
+    "id": 9,
+    "name": "CashBean9",
+    "icon": "http://api.anycash.in/images/1.jpg",
+    "amount": 60000,
+    "interest_rate": "0.049%/day",
+    "period": "91days",
+    "process_time": "10min",
+    "eligibility": [
+      "1. Indian Resident.",
+      "2. 21-56 years old.",
+      "3. Source of a monthly income."
+    ],
+    "process": "",
+    "android_jump_url": "https://play.google.com/store/apps/details?id=com.loan.cash.credit.easy.dhan.quick.udhaar.lend.game.jaldi.paisa.borrow.rupee.play.kredit\u0026hl=None",
+    "ios_jump_url": ""
+  },
+  {
+    "id": 10,
+    "name": "CashBean10",
+    "icon": "http://api.anycash.in/images/1.jpg",
+    "amount": 60000,
+    "interest_rate": "0.049%/day",
+    "period": "91days",
+    "process_time": "10min",
+    "eligibility": [
+      "1. Indian Resident.",
+      "2. 21-56 years old.",
+      "3. Source of a monthly income."
+    ],
+    "process": "",
+    "android_jump_url": "https://play.google.com/store/apps/details?id=com.loan.cash.credit.easy.dhan.quick.udhaar.lend.game.jaldi.paisa.borrow.rupee.play.kredit\u0026hl=None",
+    "ios_jump_url": ""
+  },
+  {
+    "id": 11,
+    "name": "CashBean11",
+    "icon": "http://api.anycash.in/images/1.jpg",
+    "amount": 60000,
+    "interest_rate": "0.049%/day",
+    "period": "91days",
+    "process_time": "10min",
+    "eligibility": [
+      "1. Indian Resident.",
+      "2. 21-56 years old.",
+      "3. Source of a monthly income."
+    ],
+    "process": "",
+    "android_jump_url": "https://play.google.com/store/apps/details?id=com.loan.cash.credit.easy.dhan.quick.udhaar.lend.game.jaldi.paisa.borrow.rupee.play.kredit\u0026hl=None",
+    "ios_jump_url": ""
+  },
+  {
+    "id": 12,
+    "name": "CashBean12",
+    "icon": "http://api.anycash.in/images/1.jpg",
+    "amount": 60000,
+    "interest_rate": "0.049%/day",
+    "period": "91days",
+    "process_time": "10min",
+    "eligibility": [
+      "1. Indian Resident.",
+      "2. 21-56 years old.",
+      "3. Source of a monthly income."
+    ],
+    "process": "",
+    "android_jump_url": "https://play.google.com/store/apps/details?id=com.loan.cash.credit.easy.dhan.quick.udhaar.lend.game.jaldi.paisa.borrow.rupee.play.kredit\u0026hl=None",
+    "ios_jump_url": ""
+  },
+  {
+    "id": 13,
+    "name": "CashBean13",
+    "icon": "http://api.anycash.in/images/1.jpg",
+    "amount": 60000,
+    "interest_rate": "0.049%/day",
+    "period": "91days",
+    "process_time": "10min",
+    "eligibility": [
+      "1. Indian Resident.",
+      "2. 21-56 years old.",
+      "3. Source of a monthly income."
+    ],
+    "process": "",
+    "android_jump_url": "https://play.google.com/store/apps/details?id=com.loan.cash.credit.easy.dhan.quick.udhaar.lend.game.jaldi.paisa.borrow.rupee.play.kredit\u0026hl=None",
+    "ios_jump_url": ""
+  },
+  {
+    "id": 14,
+    "name": "CashBean14",
+    "icon": "http://api.anycash.in/images/1.jpg",
+    "amount": 60000,
+    "interest_rate": "0.049%/day",
+    "period": "91days",
+    "process_time": "10min",
+    "eligibility": [
+      "1. Indian Resident.",
+      "2. 21-56 years old.",
+      "3. Source of a monthly income."
+    ],
+    "process": "",
+    "android_jump_url": "https://play.google.com/store/apps/details?id=com.loan.cash.credit.easy.dhan.quick.udhaar.lend.game.jaldi.paisa.borrow.rupee.play.kredit\u0026hl=None",
+    "ios_jump_url": ""
+  },{
+  "id": 15,
+  "name": "CashBean15",
+  "icon": "http://api.anycash.in/images/1.jpg",
+  "amount": 60000,
+  "interest_rate": "0.049%/day",
+  "period": "91days",
+  "process_time": "10min",
+  "eligibility": [
+    "1. Indian Resident.",
+    "2. 21-56 years old.",
+    "3. Source of a monthly income."
+  ],
+  "process": "",
+  "android_jump_url": "https://play.google.com/store/apps/details?id=com.loan.cash.credit.easy.dhan.quick.udhaar.lend.game.jaldi.paisa.borrow.rupee.play.kredit\u0026hl=None",
+  "ios_jump_url": ""
+}
+  ,{
+  "id": 16,
+  "name": "CashBean16",
+  "icon": "http://api.anycash.in/images/1.jpg",
+  "amount": 60000,
+  "interest_rate": "0.049%/day",
+  "period": "91days",
+  "process_time": "10min",
+  "eligibility": [
+    "1. Indian Resident.",
+    "2. 21-56 years old.",
+    "3. Source of a monthly income."
+  ],
+  "process": "",
+  "android_jump_url": "https://play.google.com/store/apps/details?id=com.loan.cash.credit.easy.dhan.quick.udhaar.lend.game.jaldi.paisa.borrow.rupee.play.kredit\u0026hl=None",
+  "ios_jump_url": ""
+}
+]
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#840255</color>
+    <color name="colorPrimaryDark">#710144</color>
+    <color name="colorAccent">#14A5A1</color>
+    <color name="color_high_light">#840255</color>
+    <color name="color_low_light">#710144</color>
+    <color name="bg_home_list">#F5F5F5</color>
+    <color name="common_btn_start">#840255</color>
+    <color name="common_btn_end">#710144</color>
+</resources>

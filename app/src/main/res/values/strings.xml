@@ -1,0 +1,14 @@
+<resources>
+    <string name="apply">GO</string>
+    <string name="privacy_title">Privacy Policy</string>
+    <string name="contact_us">Contact us</string>
+    <string name="loan_amount">Loan amount</string>
+    <string name="interests_rate">Interests rate</string>
+    <string name="time_period">Time period</string>
+    <string name="loan_processing_time">Loan processing time</string>
+    <string name="eligibility">Eligibility</string>
+    <string name="loan_process">Loan process</string>
+    <string name="apply_now">Apply Now</string>
+    <string name="max_amount">Max amount</string>
+    <string name="privacy_policy">Privacy Policy</string>
+</resources>

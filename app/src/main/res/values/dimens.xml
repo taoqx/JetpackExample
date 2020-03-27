@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="dp_16">16dp</dimen>
+    <dimen name="card_home_list_height">121dp</dimen>
+    <dimen name="high_light_sp20">20sp</dimen>
+    <dimen name="gray_light_sp13">13sp</dimen>
+</resources>

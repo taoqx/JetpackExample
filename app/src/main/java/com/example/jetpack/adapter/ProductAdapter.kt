@@ -87,7 +87,7 @@ class ProductAdapter(private val manager: FragmentManager) :
                 GlobalScope.launch {
                     try {
                         while (true) {
-                            delay(5000)
+                            delay(3000)
                             withContext(Dispatchers.Main) {
                                 binding.viewPager.setCurrentItem((current++) % 4, true)
                             }

@@ -9,12 +9,14 @@ import androidx.sqlite.db.SupportSQLiteDatabase
 import androidx.work.OneTimeWorkRequestBuilder
 import androidx.work.WorkManager
 import com.example.jetpack.utilities.DATABASE_NAME
+import com.example.jetpack.works.DbBannerReadWorker
 import com.example.jetpack.works.DbReadWorker
 
-@Database(entities = [Product::class], version = 1, exportSchema = false)
+@Database(entities = [Product::class, BannerBean::class], version = 1, exportSchema = false)
 @TypeConverters(EligibilityConverter::class)
 abstract class AppDatabase : RoomDatabase() {
     abstract fun productDao(): ProductDao
+    abstract fun bannerDao(): BannerDao
 
     companion object {
         @Volatile
@@ -36,7 +38,9 @@ abstract class AppDatabase : RoomDatabase() {
                     override fun onCreate(db: SupportSQLiteDatabase) {
                         super.onCreate(db)
                         val request = OneTimeWorkRequestBuilder<DbReadWorker>().build()
-                        WorkManager.getInstance(context).enqueue(request)
+                        val bannerRequest = OneTimeWorkRequestBuilder<DbBannerReadWorker>().build()
+
+                        WorkManager.getInstance(context).enqueue(listOf(request, bannerRequest))
                     }
                 })
                 .build()

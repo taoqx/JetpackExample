@@ -36,7 +36,6 @@
             android:background="@color/bg_home_list"
             android:clipToPadding="false"
             android:overScrollMode="never"
-            android:paddingTop="15dp"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             tools:listitem="@layout/item_home_list" />
 

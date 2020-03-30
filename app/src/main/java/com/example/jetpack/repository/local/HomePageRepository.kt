@@ -7,7 +7,10 @@ import androidx.paging.toLiveData
 import com.example.jetpack.repository.remote.ApiServiceFactory
 import com.example.jetpack.repository.remote.BaseResult
 
-class ProductRepository private constructor(private val dao: ProductDao) {
+class HomePageRepository private constructor(
+    private val productDao: ProductDao,
+    private val bannerDao: BannerDao
+) {
 
     fun getProducts(): LiveData<PagedList<Product>> {
         val pageConfig = Config(
@@ -15,7 +18,7 @@ class ProductRepository private constructor(private val dao: ProductDao) {
             prefetchDistance = 150,
             enablePlaceholders = true
         )
-        return dao.queryAll().toLiveData(pageConfig)
+        return productDao.queryAll().toLiveData(pageConfig)
     }
 
 
@@ -24,24 +27,26 @@ class ProductRepository private constructor(private val dao: ProductDao) {
             val response = ApiServiceFactory.getService().productList()
             if (response.isSuccessful && response.body() != null) {
                 val result = response.body() as BaseResult<List<Product>>
-                dao.deleteAll()
-                dao.insertAll(result.data)
+                productDao.deleteAll()
+                productDao.insertAll(result.data)
             }
         } catch (ex: java.lang.Exception) {
         }
     }
 
-    fun getProduct(name: String) = dao.queryByName(name)
+    fun getProduct(name: String) = productDao.queryByName(name)
+
+    fun getBanners() = bannerDao.queryAll()
 
     companion object {
         @Volatile
-        private var instance: ProductRepository? = null
+        private var instance: HomePageRepository? = null
 
-        fun getInstance(dao: ProductDao): ProductRepository {
+        fun getInstance(productDao: ProductDao, bannerDao: BannerDao): HomePageRepository {
             return instance
                 ?: synchronized(this) {
                     instance
-                        ?: ProductRepository(dao)
+                        ?: HomePageRepository(productDao, bannerDao)
                             .also { instance = it }
                 }
         }

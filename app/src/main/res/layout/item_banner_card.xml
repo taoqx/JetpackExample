@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="bannerBean"
+            type="com.example.jetpack.repository.local.BannerBean" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        android:elevation="6dp"
+        app:cardCornerRadius="10dp"
+        app:cardUseCompatPadding="true"
+        >
+
+        <ImageView
+            imageUrl="@{bannerBean.url}"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"/>
+
+
+    </androidx.cardview.widget.CardView>
+</layout>

@@ -3,6 +3,7 @@ package com.example.jetpack.ui.fragment
 import android.content.Context
 import android.graphics.Color
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -19,7 +20,7 @@ import com.example.jetpack.databinding.FragmentHomeBinding
 import com.example.jetpack.utilities.InjectUtil
 import com.example.jetpack.utilities.StatusBarUtil
 import com.example.jetpack.utilities.jumpToFacebook
-import com.example.jetpack.viewmodels.ProductViewModel
+import com.example.jetpack.viewmodels.HomePageViewModel
 import com.example.jetpack.viewmodels.SplashViewModel
 
 
@@ -27,7 +28,7 @@ class HomeFragment : Fragment() {
 
     private val splashViewModel by activityViewModels<SplashViewModel>()
 
-    private val viewModel by activityViewModels<ProductViewModel> {
+    private val viewModel by activityViewModels<HomePageViewModel> {
         InjectUtil.provideProductViewModelFactory(requireContext())
     }
 
@@ -112,6 +113,12 @@ class HomeFragment : Fragment() {
         viewModel.products.observe(viewLifecycleOwner, Observer {
             adapter?.submitList(it)
             binding?.swipeRefresh?.isRefreshing = false
+        })
+
+        viewModel.banners.observe(viewLifecycleOwner, Observer {
+            Log.d("qingxin", "${it.size}")
+            adapter?.bannerDatas = it.toMutableList()
+            adapter?.notifyDataSetChanged()
         })
     }
 

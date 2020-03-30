@@ -2,6 +2,7 @@
     <string name="apply">GO</string>
     <string name="privacy_title">Privacy Policy</string>
     <string name="contact_us">Contact us</string>
+    <string name="user_center">User Center</string>
     <string name="loan_amount">Loan amount</string>
     <string name="interests_rate">Interests rate</string>
     <string name="time_period">Time period</string>

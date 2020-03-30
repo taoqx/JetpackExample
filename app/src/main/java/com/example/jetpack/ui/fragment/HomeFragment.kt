@@ -11,6 +11,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
+import androidx.lifecycle.viewModelScope
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.DefaultItemAnimator
 import androidx.recyclerview.widget.RecyclerView
@@ -22,6 +23,10 @@ import com.example.jetpack.utilities.StatusBarUtil
 import com.example.jetpack.utilities.jumpToFacebook
 import com.example.jetpack.viewmodels.HomePageViewModel
 import com.example.jetpack.viewmodels.SplashViewModel
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 
 class HomeFragment : Fragment() {
@@ -52,10 +57,9 @@ class HomeFragment : Fragment() {
         //swipe refresh
         binding!!.swipeRefresh.setColorSchemeColors(Color.RED, Color.BLUE, Color.GREEN)
         binding!!.swipeRefresh.setOnRefreshListener {
-            viewModel.refresh()
+            refresh()
         }
-        viewModel.refresh()
-        binding!!.swipeRefresh.isRefreshing = true
+        refresh()
 
         //recycler view
         adapter = ProductAdapter(childFragmentManager).also {
@@ -82,8 +86,8 @@ class HomeFragment : Fragment() {
         binding!!.toolbar.apply {
             setOnMenuItemClickListener {
                 when (it.itemId) {
-                    R.id.contact_us -> {
-                        jumpToFacebook()
+                    R.id.user_center -> {
+                        findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToUserCenterFragment())
                         true
                     }
                     else -> super.onOptionsItemSelected(it)
@@ -112,14 +116,28 @@ class HomeFragment : Fragment() {
     private fun subscribeUI() {
         viewModel.products.observe(viewLifecycleOwner, Observer {
             adapter?.submitList(it)
-            binding?.swipeRefresh?.isRefreshing = false
         })
 
         viewModel.banners.observe(viewLifecycleOwner, Observer {
-            Log.d("qingxin", "${it.size}")
+            Log.d("taoqx", "${it.size}")
             adapter?.bannerDatas = it.toMutableList()
             adapter?.notifyDataSetChanged()
         })
+    }
+
+    private fun refresh() {
+        viewModel.viewModelScope.launch {
+            withContext(Dispatchers.Main) {
+                binding?.swipeRefresh?.isRefreshing = true
+            }
+            withContext(Dispatchers.IO) {
+                viewModel.refresh()
+                delay(1000)
+            }
+            withContext(Dispatchers.Main) {
+                binding?.swipeRefresh?.isRefreshing = false
+            }
+        }
     }
 
 }

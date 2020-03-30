@@ -8,15 +8,16 @@ import androidx.paging.PagedListAdapter
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.example.jetpack.R
-import com.example.jetpack.databinding.ItemBannerHomepageBinding
+import com.example.jetpack.databinding.ItemBannerViewpagerBinding
 import com.example.jetpack.databinding.ItemHomeListBinding
 import com.example.jetpack.databinding.ItemPrivacyBinding
 import com.example.jetpack.repository.local.BannerBean
 import com.example.jetpack.repository.local.Product
 import com.example.jetpack.repository.remote.HttpLog
+import com.example.jetpack.ui.fragment.HomeFragmentDirections
 import com.example.jetpack.ui.fragment.ProductDetailFragment
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.launch
+import kotlinx.coroutines.*
+import java.lang.Exception
 
 class ProductAdapter(private val manager: FragmentManager) :
     PagedListAdapter<Product, ViewHolder>(object : DiffUtil.ItemCallback<Product>() {
@@ -28,6 +29,8 @@ class ProductAdapter(private val manager: FragmentManager) :
             return oldItem == newItem
         }
     }) {
+
+    var bannerDatas = mutableListOf<BannerBean>()
 
     class ProductViewHolder(
         private val binding: ItemHomeListBinding,
@@ -60,19 +63,38 @@ class ProductAdapter(private val manager: FragmentManager) :
     class PrivacyViewHolder(binding: ItemPrivacyBinding) : ViewHolder(binding.root) {
         init {
             binding.setItemClickListener { view ->
-                view.findNavController().navigate(R.id.action_homeFragment_to_privacyFragment)
+                view.findNavController()
+                    .navigate(HomeFragmentDirections.actionHomeFragmentToPrivacyFragment())
             }
         }
     }
 
-    class BannerViewHolder(val binding: ItemBannerHomepageBinding) : ViewHolder(binding.root) {
-        fun bind(bannerDatas: MutableList<BannerBean>) {
-            (binding.viewPager.adapter as BannerAdapter).bannerDatas = bannerDatas
+    class BannerViewHolder(val binding: ItemBannerViewpagerBinding) : ViewHolder(binding.root) {
+        fun bind(datas: MutableList<BannerBean>) {
+            (binding.viewPager.adapter as BannerAdapter).apply {
+                bannerDatas = datas
+                notifyDataSetChanged()
+            }
+
+
         }
 
         init {
             binding.viewPager.apply {
                 adapter = BannerAdapter()
+
+                var current = 0
+                GlobalScope.launch {
+                    try {
+                        while (true) {
+                            delay(5000)
+                            withContext(Dispatchers.Main) {
+                                binding.viewPager.setCurrentItem((current++) % 4, true)
+                            }
+                        }
+                    } catch (ex: Exception) {
+                    }
+                }
             }
         }
     }
@@ -90,7 +112,7 @@ class ProductAdapter(private val manager: FragmentManager) :
             }
             BANNER -> {
                 BannerViewHolder(
-                    ItemBannerHomepageBinding.inflate(
+                    ItemBannerViewpagerBinding.inflate(
                         LayoutInflater.from(parent.context),
                         parent,
                         false
@@ -140,5 +162,4 @@ class ProductAdapter(private val manager: FragmentManager) :
         const val BANNER = 101
     }
 
-    var bannerDatas = mutableListOf<BannerBean>()
 }

@@ -40,7 +40,7 @@ abstract class AppDatabase : RoomDatabase() {
                         val request = OneTimeWorkRequestBuilder<DbReadWorker>().build()
                         val bannerRequest = OneTimeWorkRequestBuilder<DbBannerReadWorker>().build()
 
-                        WorkManager.getInstance(context).enqueue(listOf(request, bannerRequest))
+                        WorkManager.getInstance(context).enqueue(listOf(bannerRequest, request))
                     }
                 })
                 .build()

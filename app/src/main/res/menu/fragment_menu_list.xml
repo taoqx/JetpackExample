@@ -3,8 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/contact_us"
-        android:icon="@drawable/menu_contract_us"
+        android:id="@+id/user_center"
+        android:icon="@drawable/icon_person"
         app:showAsAction="always"
-        android:title="@string/contact_us" />
+        android:title="@string/user_center" />
 </menu>

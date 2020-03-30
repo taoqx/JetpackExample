@@ -12,17 +12,17 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@android:color/transparent"
-        android:elevation="6dp"
         app:cardCornerRadius="10dp"
+        app:cardElevation="12dp"
         app:cardUseCompatPadding="true"
+        android:background="@android:color/transparent"
         >
 
         <ImageView
             imageUrl="@{bannerBean.url}"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:scaleType="centerCrop"/>
+            android:scaleType="centerCrop" />
 
 
     </androidx.cardview.widget.CardView>

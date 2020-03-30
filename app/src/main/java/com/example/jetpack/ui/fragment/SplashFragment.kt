@@ -21,7 +21,7 @@ import kotlinx.coroutines.launch
 class SplashFragment : Fragment() {
 
     private val requestCode = 101
-    private val delayTime = 1500L
+    private val delayTime = 1000L
     private val permissions = arrayOf(
         Manifest.permission.ACCESS_FINE_LOCATION,
         Manifest.permission.READ_EXTERNAL_STORAGE,

@@ -17,14 +17,10 @@ class HomePageViewModel internal constructor(private val repository: HomePageRep
     private val _products: LiveData<PagedList<Product>> = repository.getProducts()
     var products: LiveData<PagedList<Product>> = _products
 
-    private val _banners:LiveData<List<BannerBean>> = repository.getBanners()
+    private val _banners: LiveData<List<BannerBean>> = repository.getBanners()
     var banners: LiveData<List<BannerBean>> = _banners
 
-    fun refresh() {
-        viewModelScope.launch {
-            withContext(Dispatchers.IO) {
-                repository.requestData()
-            }
-        }
+    suspend fun refresh() {
+        repository.requestData()
     }
 }

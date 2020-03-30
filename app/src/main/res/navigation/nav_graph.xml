@@ -24,6 +24,13 @@
             app:popEnterAnim="@anim/slide_in_left"
             app:popExitAnim="@anim/slide_out_right"
             />
+        <action
+            android:id="@+id/action_homeFragment_to_userCenterFragment"
+            app:destination="@id/userCenterFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
     </fragment>
 
 
@@ -38,4 +45,22 @@
         android:name="com.example.jetpack.ui.fragment.PrivacyFragment"
         android:label="PrivacyFragment"
         tools:layout="@layout/fragment_privacy"/>
+    <fragment
+        android:id="@+id/loginFragment"
+        tools:layout="@layout/fragment_login"
+        android:name="com.example.jetpack.ui.fragment.LoginFragment"
+        android:label="LoginFragment" />
+    <fragment
+        android:id="@+id/userCenterFragment"
+        android:name="com.example.jetpack.ui.fragment.UserCenterFragment"
+        android:label="UserCenterFragment"
+        tools:layout="@layout/fragment_user_center">
+        <action
+            android:id="@+id/action_userCenterFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
 </navigation>

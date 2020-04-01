@@ -26,12 +26,4 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    var interceptBack: Boolean = false
-
-    override fun onBackPressed() {
-        if (!interceptBack)
-            super.onBackPressed()
-    }
-
-
 }

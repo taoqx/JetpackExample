@@ -9,7 +9,7 @@ class LoginViewModel : ViewModel() {
     enum class LoginState {
         UNAUTHENTICATED,
         AUTHENTICATED,
-        INVALIDATE
+        CANCEL
     }
 
     val state: MutableLiveData<LoginState> by lazy {
@@ -26,6 +26,12 @@ class LoginViewModel : ViewModel() {
         if (name.isNotEmpty()) {
             state.value = LoginState.AUTHENTICATED
             username = name
+        }
+    }
+
+    fun popBack() {
+        if (state.value == LoginState.UNAUTHENTICATED) {
+            state.value = LoginState.CANCEL
         }
     }
 }

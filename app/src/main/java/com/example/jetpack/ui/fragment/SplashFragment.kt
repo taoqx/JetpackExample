@@ -7,14 +7,15 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.activity.addCallback
 import androidx.core.app.ActivityCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
-import com.example.jetpack.MainActivity
 import com.example.jetpack.databinding.FragmentSplashBinding
 import com.example.jetpack.viewmodels.SplashViewModel
+import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
@@ -34,13 +35,9 @@ class SplashFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val binding = FragmentSplashBinding.inflate(inflater, container, false)
-        return binding.root
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-
+        requireActivity().onBackPressedDispatcher.addCallback(this) {
+            // do nothing when called pop back
+        }
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             permissions.filter {
                 ActivityCompat.checkSelfPermission(
@@ -59,15 +56,13 @@ class SplashFragment : Fragment() {
         } else {
             popBack()
         }
-
+        val binding = FragmentSplashBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
     private fun popBack() {
-        viewLifecycleOwner.lifecycleScope.launch {
-            val activity = requireActivity() as MainActivity
-            activity.interceptBack = true
+        GlobalScope.launch {
             delay(delayTime)
-            activity.interceptBack = false
             splashViewModel.showed = true
             findNavController().popBackStack()
         }

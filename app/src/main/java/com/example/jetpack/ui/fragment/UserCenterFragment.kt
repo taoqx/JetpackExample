@@ -36,6 +36,7 @@ class UserCenterFragment : Fragment() {
                 LoginViewModel.LoginState.UNAUTHENTICATED -> {
                     findNavController().navigate(R.id.action_userCenterFragment_to_loginFragment)
                 }
+                else -> {}
             }
         })
     }

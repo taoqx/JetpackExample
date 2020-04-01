@@ -7,7 +7,6 @@ import androidx.navigation.findNavController
 import androidx.paging.PagedListAdapter
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
-import com.example.jetpack.R
 import com.example.jetpack.databinding.ItemBannerViewpagerBinding
 import com.example.jetpack.databinding.ItemHomeListBinding
 import com.example.jetpack.databinding.ItemPrivacyBinding
@@ -17,7 +16,6 @@ import com.example.jetpack.repository.remote.HttpLog
 import com.example.jetpack.ui.fragment.HomeFragmentDirections
 import com.example.jetpack.ui.fragment.ProductDetailFragment
 import kotlinx.coroutines.*
-import java.lang.Exception
 
 class ProductAdapter(private val manager: FragmentManager) :
     PagedListAdapter<Product, ViewHolder>(object : DiffUtil.ItemCallback<Product>() {

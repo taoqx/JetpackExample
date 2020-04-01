@@ -1,9 +1,11 @@
 package com.example.jetpack.ui.fragment
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.activity.addCallback
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
@@ -25,11 +27,13 @@ class LoginFragment : Fragment() {
     ): View? {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_login, container, false)
         StatusBarUtil.setGradientColor(requireActivity(), binding.toolbar)
+
+        //back to home insteadof user-center
+        requireActivity().onBackPressedDispatcher.addCallback(this) {
+            findNavController().popBackStack(R.id.homeFragment, false)
+        }
         binding.toolbar.setNavigationOnClickListener {
-            findNavController().popBackStack(
-                R.id.homeFragment,
-                false
-            )
+            requireActivity().onBackPressed()
         }
         return binding.root
     }
@@ -39,6 +43,8 @@ class LoginFragment : Fragment() {
         viewModel.state.observe(viewLifecycleOwner, Observer {
             when (it) {
                 LoginViewModel.LoginState.AUTHENTICATED -> findNavController().popBackStack()
+                else -> {
+                }
             }
         })
 
@@ -46,4 +52,6 @@ class LoginFragment : Fragment() {
             viewModel.login(binding.editName.text.toString())
         }
     }
+
+
 }

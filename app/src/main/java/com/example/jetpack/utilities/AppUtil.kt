@@ -164,7 +164,7 @@ fun jumpToApp() {
     val manager = MyApp.appContext!!.packageManager
     val intent = manager.getLaunchIntentForPackage("com.facebook.katana")
     intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-    intent.setData(Uri.parse("fb://facewebmodal/f?href=$FACEBOOK"))
+    intent.data = Uri.parse("fb://facewebmodal/f?href=$FACEBOOK")
     MyApp.appContext!!.startActivity(intent)
 }
 

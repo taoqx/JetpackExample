@@ -1,5 +1,6 @@
 package com.example.jetpack.ui.fragment
 
+import android.net.Uri
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -11,6 +12,8 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
+import com.bumptech.glide.Glide
+import com.bumptech.glide.request.RequestOptions
 import com.example.jetpack.R
 import com.example.jetpack.databinding.FragmentLoginBinding
 import com.example.jetpack.utilities.StatusBarUtil
@@ -47,9 +50,19 @@ class LoginFragment : Fragment() {
                 }
             }
         })
+        viewModel.avatar.observe(viewLifecycleOwner, Observer {
+            Glide.with(this)
+                .load(Uri.fromFile(it))
+                .apply(RequestOptions.circleCropTransform())
+                .into(binding.avatar)
+        })
 
         binding.loginButton.setOnClickListener {
             viewModel.login(binding.editName.text.toString())
+        }
+
+        binding.avatar.setOnClickListener {
+            findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToCameraFragment())
         }
     }
 

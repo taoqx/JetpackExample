@@ -44,7 +44,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
-                android:id="@+id/logo"
+                android:id="@+id/avatar"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:layout_marginStart="15dp"
@@ -68,7 +68,7 @@
                 android:text="@{product.name}"
                 android:textColor="#000000"
                 android:textSize="15sp"
-                app:layout_constraintStart_toEndOf="@+id/logo"
+                app:layout_constraintStart_toEndOf="@+id/avatar"
                 app:layout_constraintTop_toTopOf="parent" />
 
 
@@ -79,7 +79,7 @@
                 android:layout_marginStart="15dp"
                 android:layout_marginTop="13dp"
                 android:background="#333c3c43"
-                app:layout_constraintTop_toBottomOf="@id/logo" />
+                app:layout_constraintTop_toBottomOf="@id/avatar" />
 
             <ImageView
                 android:id="@+id/icon_interest"
@@ -89,7 +89,7 @@
                 android:layout_marginTop="28dp"
                 android:src="@drawable/icon_interest"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/logo" />
+                app:layout_constraintTop_toBottomOf="@id/avatar" />
 
             <ImageView
                 android:id="@+id/icon_period"
@@ -99,7 +99,7 @@
                 android:layout_marginTop="53dp"
                 android:src="@drawable/icon_period"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/logo" />
+                app:layout_constraintTop_toBottomOf="@id/avatar" />
 
             <TextView
                 android:id="@+id/amount"
@@ -111,7 +111,7 @@
                 android:textSize="19sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/logo"
+                app:layout_constraintTop_toBottomOf="@id/avatar"
                 app:thousandNum="@{product.amount}" />
 
             <TextView
@@ -124,7 +124,7 @@
                 android:textColor="#666666"
                 android:textSize="12sp"
                 app:layout_constraintStart_toEndOf="@id/icon_period"
-                app:layout_constraintTop_toBottomOf="@id/logo" />
+                app:layout_constraintTop_toBottomOf="@id/avatar" />
 
             <TextView
                 android:id="@+id/interest"
@@ -136,7 +136,7 @@
                 android:textColor="#666666"
                 android:textSize="12sp"
                 app:layout_constraintStart_toEndOf="@id/icon_interest"
-                app:layout_constraintTop_toBottomOf="@id/logo" />
+                app:layout_constraintTop_toBottomOf="@id/avatar" />
 
             <TextView
                 android:id="@+id/max_amount"
@@ -148,7 +148,7 @@
                 android:textColor="#B0B0B0"
                 android:textSize="13sp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/logo" />
+                app:layout_constraintTop_toBottomOf="@+id/avatar" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

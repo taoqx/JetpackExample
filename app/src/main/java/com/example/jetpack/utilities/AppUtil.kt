@@ -157,6 +157,9 @@ fun dp2px(context: Context, value: Int): Int {
     return (value * scale + 0.5f).toInt()
 }
 
+fun screenWidth(context: Context) = context.resources.displayMetrics.widthPixels
+fun screenHeight(context: Context) = context.resources.displayMetrics.heightPixels
+
 /**
  * 跳转到其他App
  */

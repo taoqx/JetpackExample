@@ -50,7 +50,7 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <ImageView
-                    android:id="@+id/logo"
+                    android:id="@+id/avatar"
                     android:layout_width="38dp"
                     android:layout_height="38dp"
                     android:layout_marginTop="20dp"
@@ -74,7 +74,7 @@
                     android:textSize="20sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/logo" />
+                    app:layout_constraintTop_toBottomOf="@id/avatar" />
 
 
                 <androidx.constraintlayout.widget.ConstraintLayout

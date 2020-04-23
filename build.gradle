@@ -43,6 +43,7 @@ buildscript {
         retrofitVersion = "2.7.1"
         pagingVersion = "2.1.1"
         swipeRefreshVersion = "1.0.0"
+        cameraXVersion = "1.0.0-beta01"
     }
 
     repositories {

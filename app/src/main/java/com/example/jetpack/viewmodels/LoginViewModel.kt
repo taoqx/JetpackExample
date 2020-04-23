@@ -3,6 +3,7 @@ package com.example.jetpack.viewmodels
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import java.io.File
 
 class LoginViewModel : ViewModel() {
 
@@ -16,10 +17,12 @@ class LoginViewModel : ViewModel() {
         MutableLiveData<LoginState>()
     }
     var username: String
+    var avatar: MutableLiveData<File>
 
     init {
         state.value = LoginState.UNAUTHENTICATED
         username = ""
+        avatar = MutableLiveData()
     }
 
     fun login(name: String) {

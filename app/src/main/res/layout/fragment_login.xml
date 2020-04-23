@@ -23,12 +23,12 @@
             app:titleTextColor="@android:color/white" />
 
         <ImageView
-            android:layout_width="200dp"
-            android:layout_height="200dp"
-            android:layout_marginTop="50dp"
-            android:id="@+id/logo"
-            android:layout_marginBottom="50dp"
-            android:src="@drawable/ic_launcher_p"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="30dp"
+            android:id="@+id/avatar"
+            android:layout_marginBottom="30dp"
+            android:src="@drawable/icon_add_photo"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/toolbar" />
@@ -37,10 +37,13 @@
             android:id="@+id/input_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/logo"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            app:layout_constraintTop_toBottomOf="@id/avatar"
             android:focusable="true"
             android:focusableInTouchMode="true"
             android:hint="Input your username here"
+            app:hintTextColor="@android:color/holo_green_dark"
             android:background="@android:color/transparent"
             app:boxBackgroundColor="@android:color/transparent"
             style="@style/editTheme"
@@ -58,6 +61,8 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
             android:background="@drawable/btn_common_radius_5"
             android:text="Login"
             android:id="@+id/loginButton"

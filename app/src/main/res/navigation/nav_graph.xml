@@ -49,7 +49,15 @@
         android:id="@+id/loginFragment"
         tools:layout="@layout/fragment_login"
         android:name="com.example.jetpack.ui.fragment.LoginFragment"
-        android:label="LoginFragment" />
+        android:label="LoginFragment" >
+        <action
+            android:id="@+id/action_loginFragment_to_cameraFragment"
+            app:destination="@id/cameraFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
     <fragment
         android:id="@+id/userCenterFragment"
         android:name="com.example.jetpack.ui.fragment.UserCenterFragment"
@@ -63,4 +71,9 @@
             app:popEnterAnim="@anim/slide_in_left"
             app:popExitAnim="@anim/slide_out_right"/>
     </fragment>
+    <fragment
+        android:id="@+id/cameraFragment"
+        android:name="com.example.jetpack.ui.fragment.CameraFragment"
+        android:label="CameraFragment"
+        tools:layout="@layout/fragment_camera"/>
 </navigation>

@@ -98,7 +98,12 @@ class CameraFragment : Fragment() {
     private fun takePicture() {
         val dir = requireContext().externalMediaDirs.first()
         val photoFile = File(dir, "${System.currentTimeMillis()}.jpg")
-        val outputFileOptions = ImageCapture.OutputFileOptions.Builder(photoFile).build()
+        val metadata = ImageCapture.Metadata().apply {
+            isReversedHorizontal = true
+        }
+        val outputFileOptions = ImageCapture.OutputFileOptions.Builder(photoFile)
+            .setMetadata(metadata)
+            .build()
         imageCapture.takePicture(
             outputFileOptions,
             Executors.newSingleThreadExecutor(),
